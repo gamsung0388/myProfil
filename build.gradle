@@ -19,8 +19,26 @@ repositories {
 }
 
 dependencies {
+	// Web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	 // MyBatis (Spring Boot 2.x 호환 버전)
+	 implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1'
+    
+    // MySQL 드라이버 (버전은 스프링부트가 관리)
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    
+    // Lombok (선호하면)
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+	annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+    
+    // Devtools
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	// Test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
