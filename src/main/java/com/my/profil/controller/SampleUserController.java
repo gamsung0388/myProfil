@@ -19,5 +19,6 @@ public class SampleUserController {
     @GetMapping("/api/sample-users")
     public List<SampleUser> getUsers() {
         return mapper.findAll();
+        
     }
 }
